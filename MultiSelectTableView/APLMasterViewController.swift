@@ -122,12 +122,12 @@ class APLMasterViewController: UITableViewController, UIActionSheetDelegate {
     
     //MARK: - Action methods
     
-    @IBAction func editAction(_: AnyObject) {
+    @IBAction func editAction(_: Any) {
         self.tableView.setEditing(true, animated: true)
         self.updateButtonsToMatchTableState()
     }
     
-    @IBAction func cancelAction(_: AnyObject) {
+    @IBAction func cancelAction(_: Any) {
         self.tableView.setEditing(false, animated: true)
         self.updateButtonsToMatchTableState()
     }
@@ -170,7 +170,7 @@ class APLMasterViewController: UITableViewController, UIActionSheetDelegate {
         }
     }
     
-    @IBAction func deleteAction(_: AnyObject) {
+    @IBAction func deleteAction(_: Any) {
         // Open a dialog with just an OK button.
         let actionTitle: String
         if self.tableView.indexPathsForSelectedRows?.count ?? 0 == 1 {
@@ -193,7 +193,7 @@ class APLMasterViewController: UITableViewController, UIActionSheetDelegate {
         self.present(actionAlert, animated: true, completion: nil)
     }
     
-    @IBAction func addAction(_: AnyObject) {
+    @IBAction func addAction(_: Any) {
         // Tell the tableView we're going to add (or remove) items.
         self.tableView.beginUpdates()
         
